@@ -10,7 +10,6 @@
 #include <QTableWidget>
 #include <QTableWidgetItem>
 #include <QCommandLinkButton>
-#include <QProcess>
 
 #include "FileSizeStatsWindow.h"
 #include "HistogramView.h"
@@ -21,6 +20,7 @@
 #include "HeaderTweaker.h"
 #include "QDirStatApp.h"
 #include "FormatUtil.h"
+#include "SysUtil.h"
 #include "Logger.h"
 #include "Exception.h"
 
@@ -499,8 +499,6 @@ void FileSizeStatsWindow::showHelp()
 
     logInfo() << "Help topic: " << topic << endl;
     QString helpUrl = "https://github.com/shundhammer/qdirstat/blob/master/doc/stats/" + topic;
-    QString program = "/usr/bin/xdg-open";
 
-    logInfo() << "Starting  " << program << " " << helpUrl << endl;
-    QProcess::startDetached( program, QStringList() << helpUrl );
+    SysUtil::openInBrowser( helpUrl );
 }

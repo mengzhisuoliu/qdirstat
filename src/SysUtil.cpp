@@ -24,6 +24,13 @@
 #include "Exception.h"
 
 
+#ifdef Q_OS_MAC
+#  define OPEN_CMD "/usr/bin/open"
+#else
+#  define OPEN_CMD "/usr/bin/xdg-open"
+#endif
+
+
 using namespace QDirStat;
 
 
@@ -153,7 +160,7 @@ void SysUtil::openInBrowser( const QString & url )
 {
     logDebug() << "Opening URL " << url << endl;
 
-    QProcess::startDetached( "/usr/bin/xdg-open", QStringList() << url );
+    QProcess::startDetached( OPEN_CMD, QStringList() << url );
 }
 
 
