@@ -365,6 +365,9 @@
    <property name="shortcut">
     <string>Ctrl+Q</string>
    </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::QuitRole</enum>
+   </property>
   </action>
   <action name="actionOpenDir">
    <property name="icon">
@@ -676,6 +679,9 @@
    <property name="toolTip">
     <string>About QDirStat</string>
    </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::AboutRole</enum>
+   </property>
   </action>
   <action name="actionAboutQt">
    <property name="text">
@@ -686,6 +692,9 @@
    </property>
    <property name="toolTip">
     <string>About Qt</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::AboutQtRole</enum>
    </property>
   </action>
   <action name="actionRefreshSelected">
