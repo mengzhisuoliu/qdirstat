@@ -381,6 +381,17 @@
     <string>Ctrl+O</string>
    </property>
   </action>
+  <action name="actionNewInstance">
+   <property name="text">
+    <string>New &amp;Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Open another QDirStat window (as a separate process)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
   <action name="actionCloseAllTreeLevels">
    <property name="text">
     <string>&amp;Close All Tree Levels</string>

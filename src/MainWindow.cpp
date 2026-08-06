@@ -13,6 +13,7 @@
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QMouseEvent>
+#include <QProcess>
 
 #include "MainWindow.h"
 #include "ActionManager.h"
@@ -139,6 +140,15 @@ MainWindow::MainWindow():
     // This makes the application to look like more "native" on macOS
     setUnifiedTitleAndToolBarOnMac( true );
     _ui->toolBar->setMovable( false );
+
+    // Add the "New Instance" action to the "File" menu on macOS only: There,
+    // clicking the Dock or Launchpad icon just activates the instance that is
+    // already running, so this is the only way to start another one. A .ui
+    // file has no way to add a menu entry on one platform only.
+
+    QAction * firstFileAction = _ui->menuFile->actions().first();
+    _ui->menuFile->insertAction   ( firstFileAction, _ui->actionNewInstance );
+    _ui->menuFile->insertSeparator( firstFileAction );
 #endif
 
     connectSignals();
@@ -646,6 +656,13 @@ QString MainWindow::handleSymLink( const QString & origUrl ) const
     }
 
     return url;
+}
+
+
+void MainWindow::newInstance()
+{
+    logInfo() << "Starting a new QDirStat instance" << endl;
+    QProcess::startDetached( QCoreApplication::applicationFilePath(), QStringList() );
 }
 
 

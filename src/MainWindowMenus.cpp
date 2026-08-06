@@ -40,6 +40,7 @@ void MainWindow::connectMenuActions()
 
 void MainWindow::connectFileMenu()
 {
+    CONNECT_ACTION( _ui->actionNewInstance,		    this, newInstance()	      );
     CONNECT_ACTION( _ui->actionOpenDir,			    this, askOpenDir()	      );
     CONNECT_ACTION( _ui->actionOpenPkg,			    this, askOpenPkg()	      );
     CONNECT_ACTION( _ui->actionShowUnpkgFiles,		    this, askShowUnpkgFiles() );
