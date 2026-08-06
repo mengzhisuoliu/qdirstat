@@ -114,7 +114,8 @@ namespace QDirStat
 
 	/**
 	 * Open a URL in the desktop's default browser (using the
-	 * /usr/bin/xdg-open command).
+	 * /usr/bin/xdg-open command on Linux and other Unix systems,
+	 * /usr/bin/open on macOS).
 	 **/
 	void openInBrowser( const QString & url );
 
