@@ -39,8 +39,8 @@ TARGET.path	 = $$INSTALL_PREFIX/bin
 INSTALLS	+= TARGET desktop icons
 
 
-QMAKE_CXXFLAGS+= -Wno-overloaded-virtual
-
+QMAKE_CXXFLAGS+= -Wno-overloaded-virtual \
+                 -Wno-sfinae-incomplete
 
 SOURCES	  = main.cpp			\
             QDirStatApp.cpp             \
