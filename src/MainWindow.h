@@ -75,6 +75,11 @@ public slots:
     void openDir( const QString & url );
 
     /**
+     * Start another QDirStat instance as a separate process.
+     **/
+    void newInstance();
+
+    /**
      * Open a directory selection dialog and open the selected URL.
      **/
     void askOpenDir();
