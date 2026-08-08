@@ -31,8 +31,6 @@ MOC_DIR		 = .moc
 OBJECTS_DIR	 = .obj
 LIBS		+= -lz
 
-major_is_less_5 = $$find(QT_MAJOR_VERSION, [234])
-!isEmpty(major_is_less_5):DEFINES += 'Q_DECL_OVERRIDE=""'
 isEmpty(INSTALL_PREFIX):INSTALL_PREFIX = /usr
 
 TARGET		 = qdirstat
