@@ -405,6 +405,11 @@ protected slots:
 
 protected:
 
+    // Platform-specific main window UI setup for MacOS X etc.
+
+    void platformSpecificSetup();
+    void platformSpecificSetupMacOSX();
+
     /**
      * Set up QObject connections (all except from QActions)
      **/
