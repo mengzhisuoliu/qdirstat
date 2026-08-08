@@ -88,18 +88,18 @@ void MainWindow::connectViewMenu()
 
 void MainWindow::connectViewExpandMenu()
 {
-    connect( _ui->actionExpandTreeLevel0,   &QAction::triggered, [=]() { expandTreeToLevel( 0 ); } );
-    connect( _ui->actionExpandTreeLevel1,   &QAction::triggered, [=]() { expandTreeToLevel( 1 ); } );
-    connect( _ui->actionExpandTreeLevel2,   &QAction::triggered, [=]() { expandTreeToLevel( 2 ); } );
-    connect( _ui->actionExpandTreeLevel3,   &QAction::triggered, [=]() { expandTreeToLevel( 3 ); } );
-    connect( _ui->actionExpandTreeLevel4,   &QAction::triggered, [=]() { expandTreeToLevel( 4 ); } );
-    connect( _ui->actionExpandTreeLevel5,   &QAction::triggered, [=]() { expandTreeToLevel( 5 ); } );
-    connect( _ui->actionExpandTreeLevel6,   &QAction::triggered, [=]() { expandTreeToLevel( 6 ); } );
-    connect( _ui->actionExpandTreeLevel7,   &QAction::triggered, [=]() { expandTreeToLevel( 7 ); } );
-    connect( _ui->actionExpandTreeLevel8,   &QAction::triggered, [=]() { expandTreeToLevel( 8 ); } );
-    connect( _ui->actionExpandTreeLevel9,   &QAction::triggered, [=]() { expandTreeToLevel( 9 ); } );
+    connect( _ui->actionExpandTreeLevel0,   &QAction::triggered, [=, this]() { expandTreeToLevel( 0 ); } );
+    connect( _ui->actionExpandTreeLevel1,   &QAction::triggered, [=, this]() { expandTreeToLevel( 1 ); } );
+    connect( _ui->actionExpandTreeLevel2,   &QAction::triggered, [=, this]() { expandTreeToLevel( 2 ); } );
+    connect( _ui->actionExpandTreeLevel3,   &QAction::triggered, [=, this]() { expandTreeToLevel( 3 ); } );
+    connect( _ui->actionExpandTreeLevel4,   &QAction::triggered, [=, this]() { expandTreeToLevel( 4 ); } );
+    connect( _ui->actionExpandTreeLevel5,   &QAction::triggered, [=, this]() { expandTreeToLevel( 5 ); } );
+    connect( _ui->actionExpandTreeLevel6,   &QAction::triggered, [=, this]() { expandTreeToLevel( 6 ); } );
+    connect( _ui->actionExpandTreeLevel7,   &QAction::triggered, [=, this]() { expandTreeToLevel( 7 ); } );
+    connect( _ui->actionExpandTreeLevel8,   &QAction::triggered, [=, this]() { expandTreeToLevel( 8 ); } );
+    connect( _ui->actionExpandTreeLevel9,   &QAction::triggered, [=, this]() { expandTreeToLevel( 9 ); } );
 
-    connect( _ui->actionCloseAllTreeLevels, &QAction::triggered, [=]() { expandTreeToLevel( 0 ); } );
+    connect( _ui->actionCloseAllTreeLevels, &QAction::triggered, [=, this]() { expandTreeToLevel( 0 ); } );
 }
 
 
