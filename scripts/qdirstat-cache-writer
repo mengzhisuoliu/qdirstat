@@ -596,7 +596,7 @@ Usage:
 	-1	file format 1.0 without UID/GID/permissions
 	-2	(default) file format 2.0 with UID/GID/permissions
 	-m	scan mounted filesystems (cross filesystem boundaries)
-	-i	ignore directory own size. Uuseful if the filesystem reports
+	-i	ignore directory own size. Useful if the filesystem reports
 		the subtree size as the size of the directory (like CephFS).
 	-v	verbose
 	-d	debug
